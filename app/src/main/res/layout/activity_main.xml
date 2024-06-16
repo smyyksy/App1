@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Kullanıcı Adı Giriş Alanı -->
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Kullanıcı Adı" />
+
+    <!-- Eposta Giriş Alanı -->
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameEditText"
+        android:layout_marginBottom="16dp"
+        android:hint="Eposta" />
+
+    <!-- Şifre Giriş Alanı -->
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailEditText"
+        android:layout_marginBottom="16dp"
+        android:hint="Şifre"
+        android:inputType="textPassword" />
+
+    <!-- Kayıt Ol Butonu -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEditText"
+        android:text="Kayıt Ol" />
+
+    <!-- Giriş Ekranına Geçiş Butonu -->
+    <Button
+        android:id="@+id/loginSwitchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerButton"
+        android:text="Hesabınız var mı? Giriş yapın" />
+</RelativeLayout>

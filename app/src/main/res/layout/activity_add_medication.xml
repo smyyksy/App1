@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMedicationActivity">
+
+    <ImageButton
+        android:id="@+id/addMedicationIconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintEnd_toStartOf="@+id/deleteMedicationIconButton"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="8dp"/>
+
+    <ImageButton
+        android:id="@+id/deleteMedicationIconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@android:drawable/ic_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/addMedicationForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:visibility="gone"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addMedicationIconButton">
+
+        <EditText
+            android:id="@+id/medicationNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="İlaç Adı"
+            android:background="@android:drawable/edit_text" />
+
+        <TextView
+            android:id="@+id/medicationTimeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text"
+            android:text="Tarih ve Saat Seç"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/addMedicationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="İlaç Ekle" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/medicationListScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/audioBookMusicButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addMedicationIconButton">
+
+        <LinearLayout
+            android:id="@+id/medicationListLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/audioBookMusicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

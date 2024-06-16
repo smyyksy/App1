@@ -1,0 +1,40 @@
+<!-- activity_experience.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ExperienceActivity">
+
+    <EditText
+        android:id="@+id/experienceEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Deneyiminizi yazın"
+        android:inputType="textMultiLine|textCapSentences" />
+
+    <Button
+        android:id="@+id/saveExperienceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/experienceEditText"
+        android:layout_marginBottom="16dp"
+        android:text="Kaydet" />
+
+    <LinearLayout
+        android:id="@+id/experienceListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saveExperienceButton"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/goToAddMedicationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/experienceListLayout"
+        android:text="İlaç Ekleme Sayfasına Git" />
+
+</RelativeLayout>
